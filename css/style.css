@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+basic stencil website
+- - - - - - - - - - -
+colors
+red #ee1d3a
+mint #1deed1
+light grey #a0a0a0
+dark grey #4d4d4d
+- - - - - - - - - - -
+reset
+*/
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, em, img, small, strike, strong,
+b, u, i, center, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, article, aside, canvas,
+figure, figcaption, footer, header, hgroup, 
+menu, nav,section, summary, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html{font-family:'Stardos Stencil', helvetica, arial, cursive;font-size:16px;line-height:1.35;font-weight:400;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
+body *{margin:0;padding:0;}
+body{margin:0;color:#4d4d4d;}
+
+/* - - - - - - - - - - */
+/* headings */
+h1, h2, h3, h4, h5, h6, strong{font-weight:700;}
+h1, h2, h3, .lg{font-size:4.5em;font-size:20vw;}
+
+/* text */
+p, ul, li, a{font-weight:400;}
+p, ul, li, .caption{font-size:1.4em;font-size:6.5vw;}
+/* large text */
+.lg{margin-top:1em;}
+.lg:first-child{margin-top:0;}
+.lg a{text-decoration:underline;}
+
+/* lists */
+ul{list-style-position:inside;list-style:none;}
+
+/* links */
+a{text-decoration:none;color:#1deed1;transition:color .25s ease-in-out;}
+a:hover{color:#ee1d3a;cursor:pointer;}
+a:active{outline:none;}
+
+/* captions */
+.caption{color:#a0a0a0;margin-top:1.5em;}
+.caption:before{content:"- ";}
+
+/* borders */
+.border{border:1px solid #4d4d4d;}
+
+
+
+/* - - - - - - - - - - */
+/* header */
+#header{display:block;/* fallback? */display:table-cell;width:100vw;height:100vh;box-sizing:border-box;padding:2.5rem 2rem 3rem;background-color:#000;color:#fff;text-align:center;vertical-align:middle;}
+#header h1{font-size:4.5em;font-size:20vw;text-shadow:-6px 3px 4px rgba(255,255,255,0.5);}
+#header p{font-size:1.75em;font-size:8vw;}
+#header strong{text-shadow:3px -3px 2px rgba(255,255,255,0.5);}
+
+/* - - - - - - - - - - */
+/* content */
+.wrapper{display:block;box-sizing:border-box;}
+.wrapper:after{display:block;content:"";clear:both;visibility:hidden;}
+
+/* whole */
+.wrapper__whole{display:block;box-sizing:border-box;padding:2.5rem 2rem 3rem;}
+.wrapper__whole:after{display:block;content:"";clear:both;visibility:hidden;}
+
+/* half */
+.half__left,
+.half__right,
+.half__centered{display:block;box-sizing:border-box;padding:2.5rem 2rem 3rem;}
+/* text containers */
+.half__left.content,
+.half__right.content,
+.half__centered.content{padding:0;}
+/* text */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content p,
+.content ul{text-align:justify;margin:1em 0;padding:0 2rem;}
+
+.content a{text-decoration:underline;}
+.content .lg{text-align:center;}
+.content img{width:1200px;height:1600px;width:100%;height:auto;display:block;margin:0;}
+
+
+/* images - lazyloading */
+img:not([src]){visibility:hidden;height:0;overflow:hidden;}
+@-moz-document url-prefix() {
+	img:-moz-loading {visibility:hidden;}
+}
+
+
+
+/* - - - - - - - - - - */
+/* footer */
+#footer{background-color:#4d4d4d;color:#fff;}
+.wrapper__footer{display:block;box-sizing:border-box;padding:1rem 2rem;}
+.wrapper__footer a{display:block;}
+
+
+/* media queries */
+@media screen and (min-width: 600px) {
+	
+	/* headings - yet to use */
+	/* 4.5/20
+	h1, h2, h3, .lg{font-size:em;font-size:vw;}
+	*/
+	/* text */
+	/* 1.4/6.5 */
+	p, ul, li, .caption{font-size:1.5em;font-size:4.5vw;}
+	
+	/* - - - - - - - - - - */
+	/* content */
+	#content{padding-top:3rem;}
+	.wrapper{width:100vw;}/* required by IE edge */
+	/* half */
+	.half__left,
+	.half__right{width:50%;width:50vw;float:left;}
+	.half__right{text-align:right;}
+	.half__left.content{padding-left:2rem;padding-right:1rem;}
+	.half__right.content{padding-left:1rem;padding-right:2rem;}
+	/* half-ish */
+	.half__centered{width:65%;width:65vw;margin:0 auto;}
+	/* captions same width as image (other text narrower) */
+	.content p.caption{padding-left:0;padding-right:0;}
+	
+	/* - - - - - - - - - - */
+	/* footer */
+	.wrapper__footer a{display:inline-block;}
+	.wrapper__footer a::before{content:"| ";color:#a0a0a0;}
+	
+	
+	/* - - - - - - - - - - */
+	/* parallax styles */
+	@supports ((perspective: 3px) and (not (-webkit-overflow-scrolling: touch))) {
+    	
+		/* note: using html and body to hold styles for parallax and parallax_group doesn't work. See if a css reset will help */
+		.parallax {
+		  perspective:3px;
+		  height:auto;
+		  overflow-x:hidden;
+		  overflow-y:auto;
+		  scroll-behaviour:smooth;
+		}
+		.parallax__group{
+			position:relative;
+			height:auto;
+			transform-style:preserve-3d;
+		}
+		
+		
+		#header{
+			transform:translateZ(-6px) scale(3);
+			z-index:2;
+			display:inline-block;
+			width:100vw;
+			height:100vh;
+			background-color:#000;
+			color:white;
+			overflow:hidden;
+		}
+		#header h1,
+		#header p{text-align:center;}
+	
+		
+		.content_group{
+			transform: translateZ(0);
+  			z-index:4;
+			position:relative;
+		}
+		.inner{
+			position:absolute;
+			/*
+			note: absolute positioning stops lazyload from working properly (1st image only loads), but is required on this or .content_group for parallax header */
+			/* 
+			left:0;
+			right:0;
+			bottom:0;
+			top:0;
+			display:table;
+			height:100%;
+			*/
+			width:100vw;
+			background-color:white;
+		}
+		
+}
+
+@media screen and (min-width: 860px) {
+	
+	/* text */
+	/* 1.4/6.5 */
+	p, ul, li, .caption{font-size:2.25em;font-size:4vw;}	
+
+}
+
+@media screen and (min-width: 1024px) {
+	
+	/* header */
+	#header h1,
+	#header p{max-width:1064px;margin:0 auto;}
+	
+	/* text */
+	/* 1.4/6.5 */
+	p, ul, li, .caption{font-size:1.75em;font-size:2.5vw;}
+	
+	/* - - - - - - - - - - */
+	/* whole and half */
+	.half__centered,
+	.wrapper__whole,
+	.wrapper__footer{padding-left:4rem;padding-right:4rem;}
+	/* half */
+	.half__left,
+	.half__left.content{padding-left:4rem;}
+	.half__right,
+	.half__right.content{padding-right:4rem;}
+	/* half-ish */
+	.half__centered{width:50%;width:50vw;}
+	/* text */
+	.content h1,
+	.content h2,
+	.content h3,
+	.content h4,
+	.content h5,
+	.content h6,
+	.content p,
+	.content ul{padding:0 2.5rem;}
+	
+}
+
+
+@media screen and (min-width: 1220px) {
+	
+	/* header */
+	#header h1{font-size:15em;font-size:17.5vw;text-shadow:-7px 4px 5px rgba(255,255,255,0.5);}
+	#header p{font-size:6em;font-size:7vw;}
+	#header strong{text-shadow:5px -3px 3px rgba(255,255,255,0.5);}
+	
+	/* - - - - - - - - - - */
+	/* whole and half */
+	.half__centered,
+	.wrapper__whole,
+	.wrapper__footer{padding-left:8rem;padding-right:8rem;}
+	/* half */
+	.half__left,
+	.half__left.content{padding-left:8rem;}
+	.half__right,
+	.half__right.content{padding-right:8rem;}
+	
+}
