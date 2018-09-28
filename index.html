@@ -26,8 +26,9 @@
         <link href="img/assets/stencil-icon.ico" type="image/x-icon" rel="Shortcut Icon">
         <link href="img/assets/Apple-Touch-Icon-57x57.png" rel="Apple Touch Icon">
         <link href="img/assets/Apple-Touch-Icon-144x144.png" rel="Apple Touch Icon">
+        
     </head>
-    <body class="home">
+    <body class="home no-js">
 
         <div class="parallax">
             <div class="parallax__group">
@@ -42,25 +43,28 @@
                         <div id="content" role="main">   
                             <div class="wrapper">
                                 <div class="half__centered content">
-                                    <!--<img data-original="img/stencils/puffin-mingulay_apr-2018.jpg" alt="Puffin on Mingulay stencil" width="1600" height="1200"/>
-                                    <noscript></noscript>-->
-                                    <img src="img/stencils/puffin-mingulay_apr-2018.jpg" alt="Puffin on Mingulay stencil" width="1600" height="1200"/>
+                                    <img src="img/stencils/crab-portland_sep-2018.jpg" alt="Crab on Portland stencil" width="1600" height="1200"/>
+                                    <noscript><img src="img/stencils/crab-portland_sep-2018.jpg" alt="Crab on Portland stencil" width="1600" height="1200"/></noscript>
+                                    <p class="caption">Crab on Portland</p>
+
+                                    <img class="lazyload loading-icon" data-src="img/stencils/puffin-mingulay_apr-2018.jpg" alt="Puffin on Mingulay stencil" width="1600" height="1200"/>
+                                    <noscript><img src="img/stencils/puffin-mingulay_apr-2018.jpg" alt="Puffin on Mingulay stencil" width="1600" height="1200"/></noscript>
                                     <p class="caption">Puffin on Mingulay</p>
-                                    <!--<img data-original="img/stencils/bird-willow_feb-2017.jpg" alt="Coal tit and willow tree stencil" width="1200" height="1600"/>
-                                    <noscript></noscript>-->
-                                    <img src="img/stencils/bird-willow_feb-2017.jpg" alt="Coal tit and willow tree stencil" width="1200" height="1600"/>
+
+                                    <img class="lazyload loading-icon" data-src="img/stencils/bird-willow_feb-2017.jpg" alt="Coal tit and willow tree stencil" width="1200" height="1600"/>
+                                    <noscript><img src="img/stencils/bird-willow_feb-2017.jpg" alt="Coal tit and willow tree stencil" width="1200" height="1600"/></noscript>
                                     <p class="caption">Coal tit and a Willow Tree</p>
-                                    <!--<img data-original="img/stencils/goats-was-pass_feb-2017.jpg" alt="Goats in Washington Pass stencil" width="1200" height="1600"/>
-                                    <noscript></noscript>-->
-                                    <img src="img/stencils/goats-was-pass_feb-2017.jpg" alt="Goats in Washington Pass stencil" width="1200" height="1600"/>
+
+                                    <img class="lazyload loading-icon" data-src="img/stencils/goats-was-pass_feb-2017.jpg" alt="Goats in Washington Pass stencil" width="1200" height="1600"/>
+                                    <noscript><img src="img/stencils/goats-was-pass_feb-2017.jpg" alt="Goats in Washington Pass stencil" width="1200" height="1600"/></noscript>
                                     <p class="caption">Goats in Washington Pass</p>
-                                    <!--img data-original="img/stencils/desert-scene_aug-2016.jpg" alt="Condor in the desert stencil" width="1200" height="1600"/>
-                                    <noscript></noscript>-->
-                                    <img src="img/stencils/desert-scene_aug-2016.jpg" alt="Condor in the desert stencil" width="1200" height="1600"/>
+
+                                    <img class="lazyload loading-icon" data-src="img/stencils/desert-scene_aug-2016.jpg" alt="Condor in the desert stencil" width="1200" height="1600"/>
+                                    <noscript><img src="img/stencils/desert-scene_aug-2016.jpg" alt="Condor in the desert stencil" width="1200" height="1600"/></noscript>
                                     <p class="caption">Condor in a desert scene</p>
-                                    <!--<img data-original="img/stencils/lily-pad-frog_jun-2012.jpg" alt="Frog on a lily pad stencil" width="1200" height="1600"/>
-                                    <noscript></noscript>-->
-                                    <img src="img/stencils/lilly-pad-frog_jun-2012.jpg" alt="Frog on a lily pad stencil" width="1200" height="1600"/>
+
+                                    <img class="lazyload loading-icon" data-src="img/stencils/lilly-pad-frog_jun-2012.jpg" alt="Frog on a lily pad stencil" width="1200" height="1600"/>
+                                    <noscript><img src="img/stencils/lilly-pad-frog_jun-2012.jpg" alt="Frog on a lily pad stencil" width="1200" height="1600"/></noscript>
                                     <p class="caption">Frog on a lily pad</p>
                                 </div>
                             </div><!--.wrapper-->
@@ -76,7 +80,11 @@
             </div><!--parallax__group-->
         </div><!--parallax-->  
   
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- lazyloading -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92514101-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];

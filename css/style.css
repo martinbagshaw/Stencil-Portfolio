@@ -101,10 +101,21 @@ a:active{outline:none;}
 
 
 /* images - lazyloading */
-img:not([src]){visibility:hidden;height:0;overflow:hidden;}
-@-moz-document url-prefix() {
-	img:-moz-loading {visibility:hidden;}
+
+/* hide lazyloaded images if js turned off */
+.no-js img.lazyload {
+  display : none;
 }
+/* show loading icon and background during loading process */
+img.lazyload:not([src]).loading-icon {
+	padding : 2.5rem 1rem;
+	box-sizing : border-box;
+	background-image : url('../img/assets/loading-icon.gif'), linear-gradient(90deg, lightgray, white, lightgray);
+	background-repeat : no-repeat;
+	background-position : center center;
+}
+
+
 
 
 
