@@ -3,12 +3,9 @@
 
 // remove no-js class from body
 document.getElementsByClassName('home')[0].classList.remove('no-js');
+const date = new Date;
+const year = date.getFullYear();
+document.getElementById('year').textContent = year;
 
-
-// callback when loaded - remove loading-icon class?
-// let images = document.querySelectorAll('img');
-// let lazy = lazyload();
-// lazy => loadImages(images);
-// lazyload(images);
-
+// run lazyload
 lazyload();
