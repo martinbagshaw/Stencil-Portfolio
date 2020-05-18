@@ -1,6 +1,10 @@
-# Stencil Website
+# Stencil Portfolio
+> My stencil portfolio website
 
-Currently a one page html website to showcase my stencil portfolio. May become a flat file CMS in the future.
+[View at martinbagshaw.github.io/Stencil-Portfolio](https://martinbagshaw.github.io/Stencil-Portfolio/)
 
-* Includes a css parallax scroll effect header for larger screens (> 600px wide)
-* Lazyloads images
+![frog on a lilly pad](./img/stencils/lilly-pad-frog_apr-2018.jpg)
+
+Technical Features: 
+- Includes a css parallax scroll effect header for larger screens (> 600px wide)
+- Lazyloads images
